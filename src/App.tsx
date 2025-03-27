@@ -1,10 +1,14 @@
 import './App.css'
+import MyComponent from "./components/MyComponent.tsx";
 
 function App() {
 
   return (
     <>
-        Vpadlo Prod Sing
+        <MyComponent text={"Vpadlo"}/>
+        <MyComponent text={"Prod"}/>
+        <MyComponent text={"2014"}/>
+        <MyComponent text={"2019"}/>
     </>
   )
 }
