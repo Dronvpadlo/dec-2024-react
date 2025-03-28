@@ -9,6 +9,7 @@ function App() {
         <MyComponent text={"Prod"}/>
         <MyComponent text={"2014"}/>
         <MyComponent text={"2019"}/>
+        <MyComponent text={"World was broken in 2022"}/>
     </>
   )
 }
