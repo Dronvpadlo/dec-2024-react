@@ -1,15 +1,18 @@
 import './App.css'
-import MyComponent from "./components/MyComponent.tsx";
+import {books} from "./data/books.ts";
+import MyBook from "./components/MyBook.tsx";
 
 function App() {
 
+
   return (
     <>
-        <MyComponent text={"Vpadlo"}/>
-        <MyComponent text={"Prod"}/>
-        <MyComponent text={"2014"}/>
-        <MyComponent text={"2019"}/>
-        <MyComponent text={"World was broken in 2022"}/>
+        {
+            books.map((book, index) => (<MyBook key={index} book={book}/>
+
+            ))
+
+        }
     </>
   )
 }
