@@ -1,6 +1,6 @@
 import './App.css'
-import {books} from "./data/books.ts";
-import MyBook from "./components/MyBook.tsx";
+import {coursesTitleArray} from "./materials/arrays-2.ts";
+import TitleComponent from "./components/TitleComponent.tsx";
 
 function App() {
 
@@ -8,8 +8,7 @@ function App() {
   return (
     <>
         {
-            books.map((book, index) => (<MyBook key={index} book={book}/>
-
+            coursesTitleArray.map((title, index) => (<TitleComponent key={index} book={title}/>
             ))
 
         }
