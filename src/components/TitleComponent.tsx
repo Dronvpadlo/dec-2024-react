@@ -1,5 +1,6 @@
 import * as React from "react";
 import {FC} from "react";
+import styles from "./MyComponent.module.css"
 
 type MyComponentPropType = {
     title: string
@@ -7,7 +8,7 @@ type MyComponentPropType = {
 
 const TitleComponent: FC<MyComponentPropType> = ({title}) => {
     return(
-        <div>{title}</div>
+        <div className={styles.target}>{title}</div>
     )
 }
 
