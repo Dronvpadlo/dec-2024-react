@@ -1,5 +1,5 @@
 import './App.css'
-import {coursesTitleArray} from "./materials/arrays-2.ts";
+import {coursesAndDurationArray} from "./materials/arrays-2.ts";
 import TitleComponent from "./components/TitleComponent.tsx";
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
   return (
     <>
         {
-            coursesTitleArray.map((title, index) => (<TitleComponent key={index} title={title}/>
+          coursesAndDurationArray.map((course, index) => (<TitleComponent key={index} course={course}/>
             ))
 
         }
