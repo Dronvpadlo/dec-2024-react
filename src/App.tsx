@@ -8,7 +8,7 @@ function App() {
   return (
     <>
         {
-            coursesTitleArray.map((title, index) => (<TitleComponent key={index} book={title}/>
+            coursesTitleArray.map((title, index) => (<TitleComponent key={index} title={title}/>
             ))
 
         }
