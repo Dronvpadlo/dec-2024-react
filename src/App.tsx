@@ -1,18 +1,38 @@
 import './App.css'
-import {coursesTitleArray} from "./materials/arrays-2.ts";
-import TitleComponent from "./components/TitleComponent.tsx";
+import {useState} from "react";
 
 function App() {
-
-
+    const [counter, setCounter] = useState(0)
   return (
-    <>
-        {
-            coursesTitleArray.map((title, index) => (<TitleComponent key={index} title={title}/>
-            ))
+      <>
+          <h2>{counter}</h2>
+          <button onClick={() => {
+              setCounter(counter - 1);
+          }}>
+              Increment
+          </button>
 
-        }
-    </>
+          <button onClick={() => {
+              setCounter(counter + counter);
+          }}>
+              Double
+          </button>
+
+          <button onClick={() => {
+              setCounter(counter + 1)
+          }}>
+              Decrement
+          </button>
+
+          <button onClick={() => {
+              setCounter(prevState => {
+                  return prevState/2
+              });
+          }}>
+              Half
+          </button>
+
+      </>
   )
 }
 
