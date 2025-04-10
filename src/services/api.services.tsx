@@ -14,7 +14,12 @@ const getPosts = async ():Promise<IPost[]> =>{
         .then(value => value.json())
 }
 
+const getPostsByUserId = async (id: number):Promise<IPost[]> => {
+    return await fetch(urls.posts.userPostsById(id))
+        .then(value => value.json())
+}
+
 
 export {
-    getUsers, getPosts
+    getUsers, getPosts, getPostsByUserId
 }

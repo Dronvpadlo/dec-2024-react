@@ -11,6 +11,7 @@ export const urls = {
         allPosts: baseUrl + '/posts',
         byId: (id: number) => {
             return baseUrl + '/posts' + id;
-        }
+        },
+        userPostsById: (id: number) => baseUrl + '/posts?userId=' + id
     }
 }
