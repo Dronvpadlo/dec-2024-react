@@ -1,16 +1,19 @@
 import React, {FC} from 'react';
 import {IUser} from "../../models/IUser.ts";
+import {Link, useNavigate} from "react-router-dom";
 
 type UserTypeProps ={
     user: IUser
 }
 
 const UserComponent:FC<UserTypeProps> = ({user}) => {
+    const navigate = useNavigate();
+    const oneClickHandler = () => {
+        navigate('details', {state: user})
+    }
     return (
         <div>
-            {user.id}. {user.username} {user.name} <br/>
-            Email: {user.email} <br/>
-            Phone: {user.phone}
+            <Link to={'details'} state={user}>{user.id}. {user.username}</Link> <button onClick={oneClickHandler}>Details</button>
         </div>
     );
 };

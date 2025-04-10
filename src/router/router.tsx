@@ -4,12 +4,14 @@ import React from "react";
 import HomePage from "../pages/HomePage.tsx";
 import UsersPage from "../pages/UsersPage.tsx";
 import PostsPage from "../pages/PostsPage.tsx";
+import UserDetailsPage from "../pages/UserDetailsPage.tsx";
 
 export const router = createBrowserRouter([
     {path: '/', element: <MainLayout/>,
         children: [
             {path: '', element: <HomePage/>},
             {path: '/users', element: <UsersPage/>},
+            {path: '/users/details', element: <UserDetailsPage/>},
             {path: '/posts', element: <PostsPage/>},
         ]
     },
