@@ -14,7 +14,6 @@ const UsersComponent = () => {
             {
                 users.map((user, index) => <UserComponent key={index} user={user}/>)
             }
-            usersComponent
         </div>
     );
 };

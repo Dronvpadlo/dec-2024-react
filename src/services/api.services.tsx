@@ -1,11 +1,20 @@
 import {IUser} from "../models/IUser.ts";
-let VITE_API_USERS_URL;
+import {IPost} from "../models/IPost.ts";
+import {urls} from "../constants/urls.ts";
+
+
 const getUsers = async ():Promise<IUser[]> =>{
 
-    return await fetch(VITE_API_USERS_URL+ '/users')
+    return await fetch( urls.users.allUsers)
+        .then(value => value.json())
+}
+const getPosts = async ():Promise<IPost[]> =>{
+
+    return await fetch( urls.posts.allPosts)
         .then(value => value.json())
 }
 
+
 export {
-    getUsers
+    getUsers, getPosts
 }
