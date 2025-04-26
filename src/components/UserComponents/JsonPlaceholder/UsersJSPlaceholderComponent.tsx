@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {getJPUsers, getUsers} from "../../../services/api.service.tsx";
+import {getJPUsers} from "../../../services/api.service.tsx";
 import {IUser} from "../../../models/IUser.ts";
 import UserJSPlaceholderComponent from "./UserJSPlaceholderComponent.tsx";
 
