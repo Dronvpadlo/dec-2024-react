@@ -11,7 +11,7 @@ const UsersJSPlaceholderComponent = () => {
     }, []);
     return (
         <div>
-            wtf
+            Users:
             {
                 users.map((user, index) => <UserJSPlaceholderComponent key={index} user={user}/>)
             }
