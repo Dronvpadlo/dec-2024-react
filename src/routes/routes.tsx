@@ -1,12 +1,12 @@
 import {createBrowserRouter} from "react-router";
 import App from "../App.tsx";
-import PostsDJComponent from "../components/PostsDJComponent.tsx";
-import CommentsJSONPlaceholderComponent from "../components/CommentsJSONPlaceholderComponent.tsx";
+import PostsDJComponent from "../components/PostComponents/DummyJson/PostsDJComponent.tsx";
+import CommentsJSONPlaceholderComponent from "../components/CommentComponents/CommentsJSONPlaceholderComponent.tsx";
 import UsersPage from "../pages/UsersPage.tsx";
 import PostsPage from "../pages/PostsPage.tsx";
-import UsersDJComponent from "../components/UsersDJComponent.tsx";
-import UsersJSPlaceholderComponent from "../components/UsersJSPlaceholderComponent.tsx";
-import PostsJSPlaceholderComponent from "../components/PostsJSPlaceholderComponent.tsx";
+import UsersDJComponent from "../components/UserComponents/DummyJson/UsersDJComponent.tsx";
+import UsersJSPlaceholderComponent from "../components/UserComponents/JsonPlaceholder/UsersJSPlaceholderComponent.tsx";
+import PostsJSPlaceholderComponent from "../components/PostComponents/JsonPlaceholder/PostsJSPlaceholderComponent.tsx";
 import CommentsPage from "../pages/CommentsPage.tsx";
 
 export const routes = createBrowserRouter([
