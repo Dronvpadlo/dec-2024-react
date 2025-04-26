@@ -12,6 +12,7 @@ const PostsJsPlaceholderComponent = () => {
     }, []);
     return (
         <div>
+            Posts:
             {
                 posts.map((post, index) => <PostJSPlaceholderComponent key={index} post={post}/>)
             }

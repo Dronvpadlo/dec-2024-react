@@ -8,6 +8,7 @@ import UsersDJComponent from "../components/UserComponents/DummyJson/UsersDJComp
 import UsersJSPlaceholderComponent from "../components/UserComponents/JsonPlaceholder/UsersJSPlaceholderComponent.tsx";
 import PostsJSPlaceholderComponent from "../components/PostComponents/JsonPlaceholder/PostsJSPlaceholderComponent.tsx";
 import CommentsPage from "../pages/CommentsPage.tsx";
+import CommentsDJComponent from "../components/CommentComponents/DummyJson/CommentsDJComponent.tsx";
 
 export const routes = createBrowserRouter([
     {
@@ -48,9 +49,12 @@ export const routes = createBrowserRouter([
                     {
                         path: "jsonplaceholder",
                         element: <CommentsJSONPlaceholderComponent/>
+                    },
+                    {
+                        path: "dummyjson",
+                        element: <CommentsDJComponent/>
                     }
-                ]
-            }
+                ]}
         ]
     }
 ]);

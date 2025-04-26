@@ -11,6 +11,7 @@ const CommentsJSONPlaceholderComponent = () => {
     }, []);
     return (
         <div>
+            Comments:
             {
                 comments.map((comment, index) => <CommentJSONPlaceholderComponent key={index} comment={comment}/>)
             }

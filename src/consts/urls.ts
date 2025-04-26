@@ -1,5 +1,5 @@
 const BaseJPUrl: string = "https://jsonplaceholder.typicode.com"
-const BaseDJUrl: string = "https://dummyjson.com/users"
+const BaseDJUrl: string = "https://dummyjson.com"
 
 const UsersJPUrl: string = BaseJPUrl + "/users"
 const PostsJPUrl: string = BaseJPUrl + "/posts"
