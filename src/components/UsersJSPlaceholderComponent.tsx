@@ -1,6 +1,6 @@
 import React from 'react';
 
-const UserJsPlaceholderComponent = () => {
+const UsersJSPlaceholderComponent = () => {
     return (
         <div>
             Users JS Placeholder
@@ -8,4 +8,4 @@ const UserJsPlaceholderComponent = () => {
     );
 };
 
-export default UserJsPlaceholderComponent;
+export default UsersJSPlaceholderComponent;

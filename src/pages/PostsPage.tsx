@@ -3,10 +3,10 @@ import JSONPlaceholderComponent from "../components/JSONPlaceholderComponent.tsx
 import {Outlet} from "react-router";
 import DummyJSONComponent from "../components/DummyJSONComponent.tsx";
 
-const UsersPage = () => {
+const PostsPage = () => {
     return (
         <div>
-            Users Page:
+            Posts Page:
             <ul>
                 <JSONPlaceholderComponent/>
                 <DummyJSONComponent/>
@@ -16,4 +16,4 @@ const UsersPage = () => {
     );
 };
 
-export default UsersPage;
+export default PostsPage;
