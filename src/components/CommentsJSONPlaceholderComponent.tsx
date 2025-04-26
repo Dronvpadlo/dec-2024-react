@@ -4,7 +4,7 @@ const CommentsJSONPlaceholderComponent = () => {
     return (
         <div>
             Comments JSON Placeholder Component
-            </div>
+        </div>
     );
 };
 

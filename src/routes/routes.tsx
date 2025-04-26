@@ -5,7 +5,6 @@ import CommentsJSONPlaceholderComponent from "../components/CommentsJSONPlacehol
 import UsersPage from "../pages/UsersPage.tsx";
 import PostsPage from "../pages/PostsPage.tsx";
 import UsersDJComponent from "../components/UsersDJComponent.tsx";
-import UsersDjComponent from "../components/UsersDJComponent.tsx";
 import UsersJSPlaceholderComponent from "../components/UsersJSPlaceholderComponent.tsx";
 import PostsJSPlaceholderComponent from "../components/PostsJSPlaceholderComponent.tsx";
 import CommentsPage from "../pages/CommentsPage.tsx";
