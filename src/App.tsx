@@ -7,7 +7,7 @@ function App() {
   return (
     <>
         <SomeComponent/>
-      App Component:
+      <hr/>
         <PaginationComponent/>
     </>
   )

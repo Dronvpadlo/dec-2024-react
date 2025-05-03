@@ -1,20 +1,26 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {useSearchParams} from "react-router";
+import {IData, IReqResIn} from "../models/IReqResIn.ts";
+import {getUsers} from "../services/api.service.ts";
+import UserComponent from "./UserComponent.tsx";
 
 const SomeComponent = () => {
     const [query, setQuery] = useSearchParams();
+    const page = query.get('page')
+    const [response, setResponse] = useState<IData[]>([])
     useEffect(() => {
-        const page = query.get('page');
-        fetch('https://reqres.in/api/users?page=' + page)
-            .then(value => value.json())
+        const page = query.get('page')
+       getUsers( page || '')
             .then(value => {
-                console.log(value)
+                setResponse(value.data)
             })
-    }, [query]);
+    }, [page]);
     return (
         <div>
-            
-            </div>
+            {
+                response.map((item, index) => <UserComponent key={index} user={item}/>)
+            }
+        </div>
     );
 };
 
