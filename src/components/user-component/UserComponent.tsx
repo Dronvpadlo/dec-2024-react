@@ -7,7 +7,8 @@ type UserPropsType = {
 const UserComponent:FC<UserPropsType> = ({user}) => {
     return (
         <div>
-            {user.id}. {user.firstName} {user.lastName}
+            {user.id}. Name: {user.firstName} {user.lastName} <br/>
+            State: {user.address.state}, City: {user.address.city}
             <hr/>
 
             </div>
