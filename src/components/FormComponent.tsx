@@ -1,44 +1,35 @@
-import React, {FormEvent, useState} from 'react';
+import {useForm} from "react-hook-form";
 
 interface IFormProps {
     username: string,
-    password: string
+    password: string,
+    age: number
 }
 const FormComponent = () => {
+    
+    const {handleSubmit, register, formState: {errors, isValid}
+    } = useForm<IFormProps>({
+        mode: 'all'
+    });
 
-    const [formState, setFormState] = useState<IFormProps>({
-        username: 'Vpadlo',
-        password: '21421'
-    })
-
-    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-        let user = {
-            username: formState.username,
-            password: formState.password
-        };
-        console.log(user)
-    }
-    // const handleUsernameChange = (e:FormEvent<HTMLInputElement>) => {
-    //     const usernameInput = e.target as HTMLInputElement;
-    //     console.log(usernameInput.value)
-    //     setFormState({...formState, username: usernameInput.value})
-    // }
-    // const handlePasswordChange = (e:FormEvent<HTMLInputElement>) => {
-    //     const passwordInput = e.target as HTMLInputElement;
-    //     console.log(passwordInput.value)
-    //     setFormState({...formState, password: passwordInput.value})
-    // };
-
-    const handleInputChange = (e:FormEvent<HTMLInputElement>) => {
-        const input = e.target as HTMLInputElement;
-        setFormState({...formState, [input.name]: input.value})
+    const customHandler = (formDataProps: IFormProps) => {
+        console.log(formDataProps)
     }
     return (
         <div>
-            <form onSubmit={handleSubmit}>
-                <input type="text" name={'username'} placeholder={'username'} value={formState.username} onChange={handleInputChange}/>
-                <input type="password" name={'password'} placeholder={'password'} value={formState.password} onChange={handleInputChange}/>
+            <form onSubmit={handleSubmit(customHandler)}>
+                <input type="text" {...register('username', {
+                    required: true,
+                    minLength: {value: 2, message: 'min 2 letters'}
+                })} placeholder={'username'}/>
+                <input type="password" {...register('password', {
+                    required: true,
+                    minLength: {value: 2, message: 'min 2 letters'}
+                })} placeholder={'password'}/>
+                <input type="number" {...register('age', {
+                    required: true,
+                    minLength: {value: 2, message: 'min 2 letters'}
+                })} placeholder={'age'}/>
                 <button>Submit</button>
             </form>
         </div>
