@@ -18,19 +18,30 @@ const FormComponent = () => {
     return (
         <div>
             <form onSubmit={handleSubmit(customHandler)}>
-                <input type="text" {...register('username', {
+                <label><input type="text" {...register('username', {
                     required: true,
                     minLength: {value: 2, message: 'min 2 letters'}
                 })} placeholder={'username'}/>
-                <input type="password" {...register('password', {
-                    required: true,
-                    minLength: {value: 2, message: 'min 2 letters'}
-                })} placeholder={'password'}/>
-                <input type="number" {...register('age', {
-                    required: true,
-                    minLength: {value: 2, message: 'min 2 letters'}
-                })} placeholder={'age'}/>
-                <button>Submit</button>
+                    {errors.username && <div>{errors.username.message}</div>}
+                </label>
+                <label>
+                    <input type="password" {...register('password', {
+                        required: true,
+                        minLength: {value: 2, message: 'min 2 letters'},
+                        maxLength: {value: 32, message: 'password to long'}
+                    })} placeholder={'password'}/>
+                    {errors.password && <div>{errors.password.message}</div>}
+                </label>
+                <label>
+                    <input type="number" {...register('age', {
+                        required: true,
+                        min: {value: 1, message: 'age to young'},
+                        max: {value: 140, message: 'age to old'}
+                    })} placeholder={'age'}/>
+
+                    {errors.age && <div>{errors.age.message}</div>}
+                </label>
+                <button disabled={!isValid}>Submit</button>
             </form>
         </div>
     );
