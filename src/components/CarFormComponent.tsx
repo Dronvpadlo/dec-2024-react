@@ -3,12 +3,17 @@ import {useForm} from "react-hook-form";
 import {joiResolver} from "@hookform/resolvers/joi";
 import {carValidator} from "../validators/car.validator.ts";
 import {ICar, ICarPost} from "../models/ICar.ts";
+import {postCar} from "../services/car.service.ts";
 
 const CarFormComponent = () => {
 
     const {handleSubmit, register, formState: {errors, isValid}} = useForm<ICarPost>({mode: 'all', resolver:joiResolver(carValidator)});
     const customHandler = (formDataProps: ICarPost)=>{
-        console.log(formDataProps)
+        if(formDataProps){
+            postCar(formDataProps)
+            console.log(formDataProps)
+        }
+
     }
     return (
         <div>
