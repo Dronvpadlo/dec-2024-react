@@ -1,14 +1,10 @@
 import React from 'react';
+import CarFormComponent from "./CarFormComponent.tsx";
 
 const PostCarComponent = () => {
     return (
         <div>
-            <form>
-                <input type="text" placeholder={'brand'}/> <br/>
-                <input type="number" placeholder={'price'}/> <br/>
-                <input type="number" placeholder={'year'}/> <br/>
-                <button>Post</button>
-            </form>
+            <CarFormComponent/>
         </div>
     );
 };

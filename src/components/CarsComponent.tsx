@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {ICar} from "../models/ICar.ts";
-import {getCars} from "../car.service.ts";
+import {getCars} from "../services/car.service.ts";
 import CarComponent from "./CarComponent.tsx";
 
 const CarsComponent = () => {

@@ -1,4 +1,4 @@
-import {ICar} from "./models/ICar.ts";
+import {ICar} from "../models/ICar.ts";
 import axios from "axios";
 
 
@@ -8,7 +8,6 @@ const axiosInstance = axios.create({
 })
 const getCars = async ():Promise<ICar[]> => {
     const cars = await axiosInstance.get<ICar[]>('/cars');
-    console.log(cars)
     return cars.data;
 }
 
