@@ -2,7 +2,7 @@ import React from 'react';
 import {useForm} from "react-hook-form";
 import {joiResolver} from "@hookform/resolvers/joi";
 import {carValidator} from "../validators/car.validator.ts";
-import {ICar, ICarPost} from "../models/ICar.ts";
+import {ICarPost} from "../models/ICar.ts";
 import {postCar} from "../services/car.service.ts";
 
 const CarFormComponent = () => {
