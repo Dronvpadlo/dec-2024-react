@@ -1,11 +1,13 @@
-import React, {FC, memo} from 'react';
+import {FC, memo} from 'react';
+import {IUser} from "../models/IUser.ts";
 
-const UserComponent:FC<{foo:()=> void, arr: number[]}> = memo(({arr}) => {
+
+const UserComponent:FC<{foo:()=> void, arr: number[], user:IUser}> = memo(({arr, user}) => {
     console.log('user')
     console.log(arr)
     return (
         <div>
-            User Component
+            {user.id}. {user.username}
         </div>
     );
 });
