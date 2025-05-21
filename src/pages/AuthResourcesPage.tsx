@@ -1,21 +1,26 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {loadAuthProducts, refresh} from "../services/api.service.ts";
+import {IProduct} from "../models/IProducts.ts";
 
 const AuthResourcesPage = () => {
 
+    const [products, setProducts] = useState<IProduct[]>([])
     useEffect(() => {
         loadAuthProducts().then(value =>{
-            console.log(value)
+            setProducts(value)
         }).catch(reason => {
             console.log(reason);
             refresh()
                 .then(() => loadAuthProducts()
-                    .then(value => console.log(value)))
+                    .then(value => setProducts(value)))
         })
     }, []);
     return (
         <div>
-            AuthResourcesPage
+            {
+                products.map((product, index) => <div key={index}>{product.id}. {product.title}</div>
+                )
+            }
         </div>
     );
 };
