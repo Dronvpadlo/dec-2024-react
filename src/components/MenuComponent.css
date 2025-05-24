@@ -1,0 +1,18 @@
+.target{
+    margin: 0;
+    width: 100vw;
+    height: 20vh;
+    background-color: #eeae87;
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    justify-content: space-evenly;
+}
+.links{
+    text-decoration: none;
+    color: #2601dc;
+
+}
+.links:hover{
+    color: red;
+}
