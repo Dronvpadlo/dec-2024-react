@@ -1,0 +1,17 @@
+.night{
+    height: 91vh;
+    width: 100vw;
+    background-image: url("https://images.pexels.com/photos/12496265/pexels-photo-12496265.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.day{
+    height: 91vh;
+    width: 100vw;
+    background-image: url("https://images.pexels.com/photos/17311064/pexels-photo-17311064/free-photo-of-aerial-view-of-naples-italy.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}

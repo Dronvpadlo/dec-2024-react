@@ -1,8 +1,19 @@
-.target{
+#night{
+    background-color: #0e6399;
     margin: 0;
-    width: 100vw;
-    height: 20vh;
-    background-color: #eeae87;
+    width: 99vw;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    justify-content: space-evenly;
+}
+
+#day{
+    background-color: #67a3af;
+    margin: 0;
+    width: 99vw;
+    height: 5vh;
     display: flex;
     align-items: center;
     font-size: 22px;
@@ -10,7 +21,7 @@
 }
 .links{
     text-decoration: none;
-    color: #2601dc;
+    color: #ffffff;
 
 }
 .links:hover{
