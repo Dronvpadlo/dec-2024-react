@@ -1,0 +1,25 @@
+.day{
+    background-color: #67a3af;
+    color: white;
+    width: 90vw;
+    margin-bottom: 5vh;
+}
+
+.night{
+    background-color: #0e6399;
+    color: white;
+    width: 90vw;
+    margin-bottom: 5vh;
+}
+.section{
+    display: flex;
+    justify-content: space-between;
+    margin: 5vw;
+
+}
+.image{
+    width: 35vw;
+}
+.infoBlock{
+    width: 35vw;
+}

@@ -1,26 +1,22 @@
 import React, {useState} from 'react';
-import {Outlet} from "react-router";
-import MenuComponent from "../components/MenuComponent.tsx";
 import './MainLayout.css'
-import {ChangeThemeContext, ThemeContext} from "../context/ThemeContext.tsx";
+import {ChangeThemeContext} from "../context/ThemeContext.tsx";
+import HomePage from "../pages/HomePage.tsx";
 
 const MainLayout = () => {
 
-    const [themeColor, setThemeColor] = useState<string>('day')
+    const [themeColor, setThemeColor] = useState<string>('night')
     return (
-        <div className={'margin'}>
         <ChangeThemeContext.Provider value={{
             theme: themeColor,
             changeTheme: (theme: string) => {
                 setThemeColor(theme)
             }
         }}>
-        <div className={'section'}>
-            <MenuComponent/>
-            <Outlet/>
+        <div>
+            <HomePage/>
         </div>
         </ChangeThemeContext.Provider>
-        </div>
     );
 };
 

@@ -1,0 +1,19 @@
+.day{
+    background-color: #67a3af;
+    color: white;
+    width: 100vw;
+    margin-bottom: 2px;
+}
+
+.night{
+    background-color: #0e6399;
+    color: white;
+    width: 100vw;
+}
+.section {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 55vh;
+}

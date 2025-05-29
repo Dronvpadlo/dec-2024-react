@@ -1,0 +1,34 @@
+.day{
+    background-color: #67a3af;
+    color: white;
+}
+
+.night{
+    background-color: #0e6399;
+    color: white;
+}
+
+.links{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 22px;
+    border: solid white;
+    border-radius: 25%;
+    margin-left: 5px;
+
+}
+.links:hover{
+    color: red;
+}
+.margin{
+    margin-top: 1px;
+}
+
+.productCard{
+    display: flex;
+    justify-content: space-between;
+}
+
+.width{
+    width: 50vw;
+}

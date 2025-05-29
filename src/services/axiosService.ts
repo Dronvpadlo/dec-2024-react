@@ -10,3 +10,10 @@ export const getItems = async <T, >(endpoint: string): Promise<T> => {
     return data;
 };
 
+export const getItemById = async <T, >(endpoint: string, id: string): Promise<T> => {
+    const {data } = await axiosInstance.get<T>(`${endpoint}/${id}`);
+    return data;
+}
+
+
+

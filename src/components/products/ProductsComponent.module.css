@@ -1,0 +1,15 @@
+.night{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-color: #063756;
+    margin: 0;
+}
+
+.day{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-color: #99d1e0;
+    margin: 0;
+}

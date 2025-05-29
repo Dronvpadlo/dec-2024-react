@@ -1,30 +1,26 @@
 import React, {useContext} from 'react';
 import {Link} from "react-router";
-import './MenuComponent.css'
 import {ChangeThemeContext} from "../context/ThemeContext.tsx";
+import styles from './MenuComponent.module.css';
 
 const MenuComponent = () => {
+    const { theme, changeTheme } = useContext(ChangeThemeContext);
 
-    const {theme, changeTheme} = useContext(ChangeThemeContext)
     const changeThemeHandler = () => {
-        if(theme === 'day'){
-            changeTheme('night')
-        }
-        else{
-            changeTheme('day')
-        }
-    }
+        changeTheme(theme === 'day' ? 'night' : 'day');
+    };
+
     return (
-        <div id={theme}>
-            <div ><Link to={'/home'} className={'links'}>Home</Link></div>
-            <div><Link to={'/auth'} className={'links'}>Auth</Link></div>
-            <div><Link to={'/products'} className={'links'}>Products</Link></div>
-            <div><Link to={'/carts'} className={'links'}>Carts</Link></div>
-            <div><Link to={'/recipes'} className={'links'}>Recipes</Link></div>
-            <div><Link to={'/users'} className={'links'}>Users</Link></div>
-            <div><Link to={'/posts'} className={'links'}>Posts</Link></div>
-            <div><Link to={'/comments'} className={'links'}>Comments</Link></div>
-            <div><Link to={'/todos'} className={'links'}>Todos</Link></div>
+        <div className={styles[theme]}>
+            <div><Link to="/" className={styles.links}>Home</Link></div>
+            <div><Link to="/auth" className={styles.links}>Auth</Link></div>
+            <div><Link to="/products" className={styles.links}>Products</Link></div>
+            <div><Link to="/carts" className={styles.links}>Carts</Link></div>
+            <div><Link to="/recipes" className={styles.links}>Recipes</Link></div>
+            <div><Link to="/users" className={styles.links}>Users</Link></div>
+            <div><Link to="/posts" className={styles.links}>Posts</Link></div>
+            <div><Link to="/comments" className={styles.links}>Comments</Link></div>
+            <div><Link to="/todos" className={styles.links}>Todos</Link></div>
             <div><button onClick={changeThemeHandler}>Change Theme</button></div>
         </div>
     );

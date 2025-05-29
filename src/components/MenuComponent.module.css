@@ -1,5 +1,4 @@
-#night{
-    background-color: #0e6399;
+.night{
     margin: 0;
     width: 99vw;
     height: 5vh;
@@ -9,8 +8,7 @@
     justify-content: space-evenly;
 }
 
-#day{
-    background-color: #67a3af;
+.day{
     margin: 0;
     width: 99vw;
     height: 5vh;
