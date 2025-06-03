@@ -11,11 +11,7 @@ const UsersPage = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/users')
-            .then(value => value.json())
-            .then(value => {
-                dispatch(userSliceAction.loadUsers(value))
-            });
+        dispatch(userSliceAction.loadUsers())
     }, []);
     return (
         <div>
