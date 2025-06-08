@@ -1,11 +1,14 @@
 import './App.css'
+import {Outlet} from "react-router";
+import MenuComponent from "./components/MenuComponent.tsx";
 
 function App() {
 
   return (
-    <>
-      APP
-    </>
+    <div>
+        <MenuComponent/>
+      <Outlet/>
+    </div>
   )
 }
 
