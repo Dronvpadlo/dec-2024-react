@@ -1,9 +1,19 @@
 import {createRoot} from 'react-dom/client'
 import './index.css'
-import App from './App.tsx'
+import {RouterProvider} from "react-router";
+import {routes} from "./router/routes.tsx";
+import React from "react";
+import {Provider, useSelector} from "react-redux";
+import {store} from "./redux/store.ts";
+
+
+export const useAppSelector = useSelector.withTypes<ReturnType<typeof store.getState>>();
 
 createRoot(document.getElementById('root')!).render(
 
-    <App />
+    <Provider store={store}>
+        <RouterProvider router={routes}/>
+    </Provider>
+
 
 )
