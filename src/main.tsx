@@ -3,11 +3,9 @@ import './index.css'
 import {RouterProvider} from "react-router";
 import {routes} from "./router/routes.tsx";
 import React from "react";
-import {Provider, useSelector} from "react-redux";
+import {Provider} from "react-redux";
 import {store} from "./redux/store.ts";
 
-
-export const useAppSelector = useSelector.withTypes<ReturnType<typeof store.getState>>();
 
 createRoot(document.getElementById('root')!).render(
 

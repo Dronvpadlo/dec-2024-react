@@ -8,7 +8,7 @@ import React from "react";
 export const routes = createBrowserRouter([
     {path: '/', element: <MainLayout/>, children: [
             {path: 'users', element: <UsersPage/>},
-            {path: 'user/1', element: <UserPage/>},
+            {path: 'users/:id', element: <UserPage/>},
             {path: 'posts', element: <PostsPage/>}
         ]}
 ]);

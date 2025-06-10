@@ -1,11 +1,12 @@
 import React, {useEffect} from 'react';
-import {useAppSelector,} from "../main.tsx";
+
 import {useAppDispatch} from "../redux/hooks/UseAppDispatch.ts";
 import {userSliceActions} from "../redux/slices/userSlice/userSlice.ts";
+import {useAppSelector} from "../redux/hooks/UseAppSelector.ts";
 
 const UsersPage = () => {
 
-    const {users} = useAppSelector(({userSlice}) => userSlice);
+    const {users, loadState} = useAppSelector(({userSlice}) => userSlice);
     const dispatch = useAppDispatch();
 
     useEffect(() => {
@@ -14,8 +15,9 @@ const UsersPage = () => {
 
     return (
         <div>
+            {!loadState && <p>...Loading</p>}
             {
-                users.map((user) => <div>{user.id}. {user.name}</div>)
+                users.map((user) => <div key={user.id}>{user.id}. {user.name}</div>)
             }
         </div>
     );

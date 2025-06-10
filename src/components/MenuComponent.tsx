@@ -6,7 +6,7 @@ const MenuComponent = () => {
         <div>
             <p><Link to={'/'}>Home</Link></p>
             <p><Link to={'/users'}>Users</Link></p>
-            <p><Link to={'/user/1'}>User</Link></p>
+            <p><Link to={'/users/1'}>User</Link></p>
             <p><Link to={'/posts'}>Pasts</Link></p>
 
         </div>
